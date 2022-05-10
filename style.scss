@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,8 +11,8 @@
   
 
   header {
-    clear:both;
     display: flex;
+    z-index: 3;
     justify-content: flex-end;
     font-family: 'Oswald', sans-serif;
     align-items: center;
@@ -350,6 +349,7 @@
 }
 
 #progressbar {
+  z-index: 3;
   position: fixed;
   top: 80px;
   left: 0;
@@ -398,7 +398,8 @@
 
 #myBtn {
   background: url(logo/chevron-up-outline.svg) no-repeat;
-  text-align:center;
+  background-position: center;
+  align-items: center;
   display: none;
   position: fixed;
   bottom: 20px;
@@ -449,9 +450,18 @@
   width: 100%;
 }
 
+#about h1 {
+  margin: 70px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #050505;
+  text-align: center;
+  padding: 0;
+}
 
-
-#staff h1, #about h1, #features h1 {
+#staff h1, #features h1 {
   margin: 70px;
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;

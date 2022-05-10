@@ -10,8 +10,8 @@
 }
 
 header {
-  clear: both;
   display: flex;
+  z-index: 3;
   justify-content: flex-end;
   font-family: "Oswald", sans-serif;
   align-items: center;
@@ -214,7 +214,7 @@ body {
 .overlay__content a {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  color: #edf0f1;
+  color: #050505;
   text-decoration: none;
 }
 
@@ -325,6 +325,7 @@ body {
 }
 
 #progressbar {
+  z-index: 3;
   position: fixed;
   top: 80px;
   left: 0;
@@ -370,7 +371,8 @@ body {
 
 #myBtn {
   background: url(logo/chevron-up-outline.svg) no-repeat;
-  text-align: center;
+  background-position: center;
+  align-items: center;
   display: none;
   position: fixed;
   bottom: 20px;
@@ -421,7 +423,18 @@ body {
   width: 100%;
 }
 
-#staff h1, #about h1, #features h1 {
+#about h1 {
+  margin: 70px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #050505;
+  text-align: center;
+  padding: 0;
+}
+
+#staff h1, #features h1 {
   margin: 70px;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
