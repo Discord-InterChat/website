@@ -10,11 +10,29 @@ menuOpen.addEventListener("click", () => {
 menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay--active");
 });
-
 let progress = document.getElementById("progressbar");
-let totalHeight = document.body.scrollHeight - window.innerHeight;
+var docHeight = $(document).height();
+var windowHeight = $(window).height();
 window.onscroll = function () {
-  let progressHeight = (window.pageYOffset / totalHeight) * 100;
-  //progress.style.height = progressHeight + "%";
-  progress.style.width = progressHeight + "%";
+  scrollFunction()
+  var windowScrollTop = $(window).scrollTop();
+  var progressHeight = (windowScrollTop / (docHeight - windowHeight)) * 100;
+  progress.style.width = Math.abs(progressHeight) + "%";
 };
+
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
