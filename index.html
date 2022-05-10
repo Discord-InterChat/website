@@ -6,18 +6,35 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/x-icon" href="logo/chatbot.png">   
+        <link rel="icon" type="image/x-icon" href="logo/chatbot.png">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     </head>
     <body>
-        <script type="text/javascript" defer src="main.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script>
-            particlesJS.load('particles-js', 'particles.json', function(){
-                console.log('particles.json loaded...');
-            })
+        <header>
+            <a class="logo" href="#"><img src="logo/chatbot.png" width="60px" height="60px" alt="logo"></a>
+            <nav id="navbar">
+                <ul class="nav__links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Staff</a></li>
+                    <li><a href="#">About</a></li>
+                    
+                </ul>
+            </nav>
+            <a class="cta" style="color: #000" href="https://discord.com/api/oauth2/authorize?client_id=769921109209907241&scope=applications.commands+bot&permissions=8" target="_blank">Invite</a>
+            <p class="menu cta">Menu</p>
+        </header>
+        <div class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+                
+            </div>
+        </div>
         
-        </script>
         <div id="particles-js">
             <div class="chatbot">
                 <h1>
@@ -34,109 +51,21 @@
                 </div>
             </div>
         </div>
+
         <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-        <header>
-            <a class="logo" href="/"><img src="logo/chatbot.png" width="60px" height="60px" alt="logo"></a>
-            <nav id="navbar">
-                <ul class="nav__links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="https://www.gitbook.com">Documentation</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#staff">Staff</a></li>
-                    
-                </ul>
-            </nav>
-            <a class="cta" href="https://discord.com/api/oauth2/authorize?client_id=769921109209907241&scope=applications.commands+bot&permissions=8" target="_blank">Invite</a>
-            <p class="menu cta">Menu</p>
-        </header>
-        <div class="overlay">
-            <a class="close">&times;</a>
-            <div class="overlay__content">
-                <p id="menuDisplay">Options</p>
-                <li><a href="#">Home</a></li>
-                <li><a href="https://www.gitbook.com">Documentation</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#staff">Staff</a></li>
-                <li><a href="#about">About</a></li>
-                
-            </div>
-        </div>
         <div id="scollPath"></div>
         <div id="progressbar"></div>
-        
-            <div id="section1">
-                </div>
-            <div id="section2">
-                </div>
-            <div id="features">
-                <h1> Features </h1>
-                <div class="container">
-                    <div class="serviceBox">
-                        <div class="icon" style="--i:#4eb7ff">
-                        <ion-icon name="color-palette-outline"></ion-icon>
-                    </div>
-                    <div class="content">
-                        <h2>Design</h2>
-                        <p>Learning HTML and CSS.</p>
-                    </div>
-                </div>
-                <div class="serviceBox">
-                    <div class="icon" style="--i:#43f390">
-                        <ion-icon name="code-slash-outline"></ion-icon>
-                    </div>
-                    <div class="content">
-                        <h2>Development</h2>
-                        <p>I can make Discord Bots in Javascript and Python.</p>
-                    </div>
-                </div>
-                <div class="serviceBox">
-                    <div class="icon" style="--i:#ffb508">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </div>
-                    <div class="content">
-                        <h2>SEO</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, molestias? Aliquid, tenetur laudantium iste consequatur modi doloremque quo nulla et, nobis vitae ex quibusdam beatae id expedita odio ab vel.</p>
-                    </div>
-                </div>
-                <div class="serviceBox">
-                    <div class="icon" style="--i:#37ba82">
-                        <ion-icon name="bar-chart-outline"></ion-icon>
-                    </div>
-                    <div class="content">
-                        <h2>Digital Stuff</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, molestias? Aliquid, tenetur laudantium iste consequatur modi doloremque quo nulla et, nobis vitae ex quibusdam beatae id expedita odio ab vel.</p>
-                    </div>
-                </div>
-                <div class="serviceBox">
-                    <div class="icon" style="--i:#cd57ff">
-                        <ion-icon name="videocam-outline"></ion-icon>
-                    </div>
-                    <div class="content">
-                        <h2>Video Editing</h2>
-                        <p>I can do basic video editing with cool transitons and stuff.</p>
-                    </div>
-                </div>
-                <div class="serviceBox">
-                    <div class="icon" style="--i:#fd6494">
-                        <ion-icon name="game-controller-outline"></ion-icon>
-                    </div>
-                    <div class="content">
-                        <h2>Game Development</h2>
-                        <p>Working on a Krunker.io game client for better in-game performace.</p>
-                    </div>
-                </div>
+
+        <div class="container">
+            <div class="section1">
+                <h1>Hello World</h1>
             </div>
-                </div>
-            <div id="about">
-            <h1> About </h1>
-                </div>
-            <div id="staff">
-            <h1> Staff </h1>
-                </div>         
-
-
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            <div class="section2"></div>
+            <div class="section3"></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script>particlesJS.load('particles-js', 'particles.json', function(){console.log('particles.json loaded...');})</script>
     </body>
 </html>
