@@ -154,6 +154,10 @@ header {
   display: block;
 }
 
+.feature-container {
+  padding: 30px;
+}
+
 .features {
   scroll-margin-top: 100px;
   height: 50vh;
@@ -218,6 +222,7 @@ header {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
   background: linear-gradient(to left, #5cb5f9, #8dcbfa);
+  justify-content: center;
 }
 
 .card:hover {
