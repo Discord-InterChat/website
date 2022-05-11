@@ -224,12 +224,12 @@
     border-radius: 10px;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
     transition: all 0.2s;
+    background: linear-gradient(to left, #5cb5f9, #8dcbfa);
   }
   
   .card:hover {
-    background: #1fe4f5;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-    transform: scale(1.01);
+    transform: scale(1.07);
   }
   
   .card__link,
@@ -256,8 +256,10 @@
   }
   
   .card__exit {
+    padding-top: 20px;
+    font-size: 25px;
     grid-row: 1/2;
-    justify-self: end;
+    justify-self: center;
   }
   
   .card__icon {
@@ -266,6 +268,7 @@
   }
   
   .card__title {
+    font-size: 20px;
     grid-row: 3/4;
     font-weight: 400;
     color: #ffffff;
@@ -279,7 +282,7 @@
   /* CARD BACKGROUNDS */
   
   .card-1 {
-    background-color: red;
+    background: linear-gradient(to left, #5cb5f9, #8dcbfa);
   }
   
   /* RESPONSIVE */
