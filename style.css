@@ -155,11 +155,23 @@ header {
 }
 
 .features {
-  height: 70vh;
+  scroll-margin-top: 100px;
+  height: 50vh;
   width: 100%;
+  margin-bottom: 100px;
 }
 
-.main-container {
+.staff {
+  height: 50vh;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.staff p {
+  padding-left: 20px;
+}
+
+.feature-container {
   padding: 30px;
 }
 
