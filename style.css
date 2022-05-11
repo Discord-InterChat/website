@@ -16,7 +16,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30%;
+  padding: 10px 10%;
   background-color: #050505;
   position: fixed;
   top: 0;
@@ -72,7 +72,7 @@ header {
 }
 
 .cta:hover {
-  background-color: #8dcbfa;
+  background-color: #8dcbfa; 
 }
 
 .menu {
@@ -96,6 +96,7 @@ header {
 }
 
 .overlay__content {
+  list-style: none;
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -104,6 +105,7 @@ header {
 }
 
 .overlay a {
+  list-style: none;
   padding: 15px;
   font-size: 36px;
   display: block;
@@ -146,24 +148,134 @@ header {
   }
 }
 .container {
+  padding-top: 50px;
   text-align: center;
   font-family: "Oswald", sans-serif;
   display: block;
 }
 
-.section1 {
+.features {
   height: 70vh;
   width: 100%;
 }
 
-.section1 h1 {
-  padding-top: 20px;
-  font-weight: 700;
-  letter-spacing: 1.3px;
-  text-transform: uppercase;
-  color: #fff;
+.main-container {
+  padding: 30px;
 }
 
+/* HEADING */
+.heading {
+  text-align: center;
+}
+
+.heading__title {
+  color: #fff;
+  font-weight: 600;
+}
+
+.heading__credits {
+  margin: 10px 0px;
+  color: #888888;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+
+.heading__link {
+  text-decoration: none;
+}
+
+.heading__credits .heading__link {
+  color: inherit;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  width: 400px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.07);
+}
+
+.card__link,
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__exit {
+  font-size: 25px;
+  grid-row: 1/2;
+  padding-top: 15px;
+  justify-self: center;
+}
+
+.card__icon {
+  grid-row: 2/3;
+  font-size: 20px;
+}
+
+.card__title {
+  font-size: 20px;
+  grid-row: 3/4;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+/* CARD BACKGROUNDS */
+.card-1 {
+  background: #8dcbfa;
+}
+.card-2 {
+  background: #8dcbfa;
+}
+.card-3 {
+  background: #8dcbfa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1600px) {
+  .cards {
+    justify-content: center;
+  }
+}
 /* particle elements */
 .chatbot {
   width: 90%;
@@ -263,6 +375,93 @@ header {
 
 #myBtn:hover {
   background-color: #555;
+}
+
+/* Invite and Discord Buttons */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+.pulse {
+  --color: #fff;
+  --hover: white;
+}
+
+.pulse {
+  transition: 0.25s;
+  letter-spacing: 1.3px;
+  cursor: pointer;
+}
+.pulse:hover, .pulse:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+/* Basic button styles */
+.pulse {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  color: var(--color);
+  appearance: button;
+  min-width: 200px;
+  min-height: 63px;
+  font-family: "Oswald", sans-serif;
+  font-size: 19.1px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  margin-left: 2%;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 8px;
+  top: -2px;
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  padding: 1em 2em;
+}
+
+/* Animate the size, outside */
+.pulse:hover,
+.pulse:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.inviteBtn {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  min-width: 200px;
+  min-height: 60px;
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: 700;
+  color: #313133;
+  background: #5cb5f9;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 15px;
+}
+
+.inviteBtn:hover, .inviteBtn.focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+/* Disable Scroll Bar */
+::-webkit-scrollbar {
+  width: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
