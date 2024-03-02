@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -27,11 +28,10 @@ header {
   border-radius: 50px;
 }
 
-#navcontainer { 
+.navcontainer { 
   display: flex;
   justify-content: center;
-  // add space between the navbar and the top of the page
-  padding-top: 20px;
+  padding-top: 20px; // add space between the navbar and the top of the page
 }
 
 body {
@@ -111,6 +111,7 @@ body {
 
 .menu {
   display: none;
+  margin-left: 30px;
 }
 
 .overlay {
@@ -188,7 +189,6 @@ body {
 }
 .chatbot h1 {
   font-size: 62px;
-  transition: all 0.3s linear;
   padding: 20px;
 }
 
@@ -324,7 +324,7 @@ $colors: (
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 780px) {
   .nav__links,
   .cta {
     display: none;
