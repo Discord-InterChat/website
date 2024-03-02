@@ -5,23 +5,33 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
   scroll-behavior: smooth;
   --primary-blue: #3ba3f3;
 }
 
 header {
-  display: flex;
+  display: inline-flex;
+  text-align: center;
   z-index: 3;
-  justify-content: flex-end;
   font-family: "Oswald", sans-serif;
   align-items: center;
-  padding: 30px 30%;
-  /* background-color: #24252a; */
-  background-color: #161616;
-  position: fixed;
+  justify-content: center;
+  background-color: #030303;
+  position: relative;
   height: 80px;
-  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-style: solid;
+  border-color: #50abff;
+  border-width: 2px;
+  border-radius: 50px;
+}
+
+#navcontainer { 
+  display: flex;
+  justify-content: center;
+  // add space between the navbar and the top of the page
+  padding-top: 20px;
 }
 
 body {
@@ -42,6 +52,111 @@ body {
   width: 100%;
 }
 
+.logo {
+  position: relative;
+}
+
+.logo img {
+  border-radius: 50%;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links a,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+  text-align: center;
+}
+
+.cta {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #5cb5f9;
+}
+
+.cta {
+  position: relative;
+  padding: 9px 25px;
+  background-color: #5cb5f9;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: #8dcbfa;
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #8dcbfa;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+  cursor: pointer;
+}
+
 .chatbot img {
   position: relative;
   width: 200px; /* Adjust the width as needed */
@@ -52,10 +167,12 @@ body {
 
 @keyframes hoverUpDown {
   0% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
-      transform: translateY(-20px); /* Adjust the distance the logo hovers up and down */
+    transform: translateY(
+      -20px
+    ); /* Adjust the distance the logo hovers up and down */
   }
 }
 
@@ -92,7 +209,7 @@ body {
 }
 
 #interchat_text_hi {
-  background: linear-gradient(to right, var(--primary-blue), #0F5CFB);
+  background: linear-gradient(to right, var(--primary-blue), #0f5cfb);
   color: transparent; /* Hide the original text color */
   display: inline-block; /* Ensure the gradient is applied only to the text, not the entire element */
   -webkit-background-clip: text; /* For WebKit browsers like Chrome and Safari */
@@ -196,155 +313,6 @@ $colors: (
   transform: translateY(-6px);
 }
 
-.discordBtn {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 200px;
-  min-height: 60px;
-  margin-left: 30px;
-  padding-left: 80px;
-  font-family: "Oswald", sans-serif;
-  font-size: 22px;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  font-weight: 700;
-  color: #313133;
-  background: #e6f3fd;
-  border: none;
-  border-radius: 1000px;
-  font-weight: 500;
-  text-decoration: none;
-  box-shadow: 12px 12px 24px #e6f3fd;
-  transition: all 0.3s ease-in-out 0s;
-  cursor: pointer;
-  outline: none;
-  position: relative;
-  padding: 10px;
-}
-
-.discordBtn:hover,
-.discordBtn.focus {
-  color: #313133;
-  transform: translateY(-6px);
-}
-
-/* .chatbot {
-    position: absolute;
-    size: 100px;
-    font-family: 'Radio Canada', sans-serif;
-    font-weight: 500;
-    color: #2ecbff;
-    top: 50%;
-    right: 50%;
-  } */
-
-.logo {
-  position: relative;
-  margin-right: auto;
-}
-
-.logo img {
-  border-radius: 50%;
-}
-
-.nav__links {
-  list-style: none;
-  display: flex;
-}
-
-.nav__links a,
-.overlay__content a {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  color: #edf0f1;
-  text-decoration: none;
-}
-
-.cta {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  color: #000;
-  text-decoration: none;
-}
-
-.nav__links li {
-  padding: 0px 20px;
-}
-
-.nav__links li a {
-  transition: all 0.3s ease 0s;
-}
-
-.nav__links li a:hover {
-  color: #5cb5f9;
-}
-
-.cta {
-  margin-left: 20px;
-  position: relative;
-  padding: 9px 25px;
-  background-color: #5cb5f9;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-.cta:hover {
-  background-color: #8dcbfa;
-}
-
-/* Mobile Nav */
-
-.menu {
-  display: none;
-}
-
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  background-color: #24252a;
-  overflow-x: hidden;
-  transition: all 0.5s ease 0s;
-}
-
-.overlay--active {
-  width: 100%;
-}
-
-.overlay__content {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.overlay a {
-  padding: 15px;
-  font-size: 36px;
-  display: block;
-  transition: all 0.3s ease 0s;
-}
-
-.overlay a:hover,
-.overlay a:focus {
-  color: #8dcbfa;
-}
-.overlay .close {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-  color: #edf0f1;
-  cursor: pointer;
-}
-
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px;
@@ -366,7 +334,7 @@ $colors: (
   }
   .chatbot img {
     width: 25%; /* Adjust the width for smaller screens */
-}
+  }
 }
 
 //   ::-webkit-scrollbar {

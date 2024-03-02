@@ -1,44 +1,48 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>InterChat</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/x-icon" href="logo/interchat.png">   
-    </head>
-    <body>
-        <script type="text/javascript" defer src="main.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script>
-            particlesJS.load('particles-js', 'particles.json', function(){
-                console.log('particles.json loaded...');
-            })
-        
-        </script>
-        <div id="particles-js">
-            <div class="chatbot">
-                <img src="logo/interchat.png" alt="InterChat Logo">
 
-                <h1>
-                    Chat <span id="interchat_text_hi">Across Servers</span> On Discord
-                </h1>
-                <p>
-                    Eliminate the boundaries of servers with InterChat. Talk between servers, Increase your server activity, members, and have the most fun you’ve ever had!
-                </p>
-                
-                <div id="btn">
-                    <a class="inviteBtn"  href="https://interchat.fun/invite" target="_blank">Invite</a>
-                    <a class="pulse" href="/support" target="_blank">Discord</a>
-                    <!-- <a class="discordBtn" href="https://discord.gg/6bhXQynAPs" target="_blank">Discord</a> -->
-                </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>InterChat</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo/interchat.png">
+</head>
+
+<body>
+    <script type="text/javascript" defer src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.json loaded...');
+        })
+
+    </script>
+    <div id="particles-js">
+        <div class="chatbot">
+            <img src="logo/interchat.png" alt="InterChat Logo">
+
+            <h1>
+                Chat <span id="interchat_text_hi">Across Servers</span>, On Discord
+            </h1>
+            <p>
+                InterChat's cross-server chat completely eliminates the boundaries of servers. Talk between servers, Increase your
+                server activity, members, and have the most fun you’ve ever had!
+            </p>
+
+            <div id="btn">
+                <a class="inviteBtn" href="https://interchat.fun/invite" target="_blank">Invite</a>
+                <a class="pulse" href="/support" target="_blank">Discord</a>
             </div>
         </div>
-        <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+    <div id="navcontainer">
         <header>
             <a class="logo" href="/"><img src="logo/interchat.png" width="60px" height="60px" alt="logo"></a>
+
             <nav id="navbar">
                 <ul class="nav__links">
                     <li><a href="#">Home</a></li>
@@ -46,28 +50,30 @@
                     <li><a href="#features">Features</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#staff">Staff</a></li>
-                    
+
                 </ul>
             </nav>
             <a class="cta" href="/invite" target="_blank">Invite</a>
             <p class="menu cta">Menu</p>
         </header>
-        <div class="overlay">
-            <a class="close">&times;</a>
-            <div class="overlay__content">
-                <p id="menuDisplay">Options</p>
-                <li><a href="#">Home</a></li>
-                <li><a href="https://docs.interchat.fun">Documentation</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#staff">Staff</a></li>
-                <li><a href="#about">About</a></li>
-                
-            </div>
-        </div>
-        <div id="scollPath"></div>
-        <div id="progressbar"></div>
+    </div>
+    <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <p id="menuDisplay">Options</p>
+            <li><a href="#">Home</a></li>
+            <li><a href="https://docs.interchat.fun">Documentation</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#staff">Staff</a></li>
+            <li><a href="#about">About</a></li>
 
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    </body>
+        </div>
+    </div>
+    <div id="scollPath"></div>
+    <div id="progressbar"></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
