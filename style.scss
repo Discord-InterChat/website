@@ -42,6 +42,23 @@ body {
   width: 100%;
 }
 
+.chatbot img {
+  position: relative;
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%;
+  animation: hoverUpDown 2s infinite alternate ease-in-out; /* Adjust the duration as needed */
+}
+
+@keyframes hoverUpDown {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-20px); /* Adjust the distance the logo hovers up and down */
+  }
+}
+
 .chatbot {
   width: 90%;
   color: #fff;
@@ -75,7 +92,11 @@ body {
 }
 
 #interchat_text_hi {
-  color: var(--primary-blue);
+  background: linear-gradient(to right, var(--primary-blue), #0F5CFB);
+  color: transparent; /* Hide the original text color */
+  display: inline-block; /* Ensure the gradient is applied only to the text, not the entire element */
+  -webkit-background-clip: text; /* For WebKit browsers like Chrome and Safari */
+  background-clip: text; /* For WebKit browsers like Chrome and Safari */
 }
 
 @keyframes pulse {
@@ -159,7 +180,7 @@ $colors: (
   letter-spacing: 1.1px;
   font-weight: 700;
   color: #313133;
-  background: #5cb5f9;
+  background: var(--primary-blue);
   text-decoration: none;
   // border-radius: 1000px;
   transition: all 0.3s ease-in-out 0s;
@@ -343,6 +364,9 @@ $colors: (
   .menu {
     display: initial;
   }
+  .chatbot img {
+    width: 25%; /* Adjust the width for smaller screens */
+}
 }
 
 //   ::-webkit-scrollbar {
