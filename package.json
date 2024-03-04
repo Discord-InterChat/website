@@ -6,10 +6,9 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "scss": "node-sass --watch . -o ."
     },
-
+    "license": "MIT",
     "keywords": [],
-    "dependencies": {
-        "jquery": "^3.7.0",
+    "devDependencies": {
         "node-sass": "^9.0.0"
     }
 }

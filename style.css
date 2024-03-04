@@ -14,7 +14,6 @@ header {
   z-index: 3;
   font-family: "Oswald", sans-serif;
   align-items: center;
-  justify-content: center;
   background-color: #030303;
   position: relative;
   height: 80px;
@@ -36,8 +35,7 @@ body {
   margin: 0;
   padding: 0;
   background: #121212;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
   /* background: #2e3036f5; */ }
 
 #particles-js {
@@ -135,23 +133,6 @@ body {
   color: #edf0f1;
   cursor: pointer; }
 
-.chatbot img {
-  position: relative;
-  width: 200px;
-  /* Adjust the width as needed */
-  height: auto;
-  /* Maintain aspect ratio */
-  border-radius: 50%;
-  animation: hoverUpDown 2s infinite alternate ease-in-out;
-  /* Adjust the duration as needed */ }
-
-@keyframes hoverUpDown {
-  0% {
-    transform: translateY(0); }
-  100% {
-    transform: translateY(-20px);
-    /* Adjust the distance the logo hovers up and down */ } }
-
 .chatbot {
   width: 90%;
   color: #fff;
@@ -163,7 +144,7 @@ body {
   text-align: center; }
 
 .chatbot h1 {
-  font-size: 62px;
+  font-size: 3rem;
   padding: 20px; }
 
 .chatbot p {
@@ -179,7 +160,7 @@ body {
   /* Center the text within its container */
   margin: 0 auto;
   /* Add margin:auto to center the container itself */
-  font-size: 30px;
+  font-size: 2rem;
   color: white; }
 
 #interchat_text_hi {
@@ -192,6 +173,23 @@ body {
   /* For WebKit browsers like Chrome and Safari */
   background-clip: text;
   /* For WebKit browsers like Chrome and Safari */ }
+
+.chatbot img {
+  position: relative;
+  width: 15rem;
+  /* Adjust the width as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 50%;
+  animation: hoverUpDown 2s infinite alternate ease-in-out;
+  /* Adjust the duration as needed */ }
+
+@keyframes hoverUpDown {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-20px);
+    /* Adjust the distance the logo hovers up and down */ } }
 
 @keyframes pulse {
   0% {
