@@ -10,5 +10,6 @@
     "keywords": [],
     "devDependencies": {
         "node-sass": "^9.0.0"
-    }
+    },
+    "packageManager": "yarn@4.1.1"
 }
