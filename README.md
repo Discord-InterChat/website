@@ -18,4 +18,4 @@ If you would like to contribute to the website, please follow the steps below:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This project was created by [dev-737](https://github.com/dev-737) & [supreme1707](https://github.com/supreme1707) invite the bot to your server [here](https://interchat.fun/invite). The website can be found at https://interchat.fun.
+This project was created by [dev-737](https://github.com/dev-737) & [supreme1707](https://github.com/supreme1707) invite the bot to your server [here](https://interchat.fun/invite). The website can be found at https://interchat.fun
