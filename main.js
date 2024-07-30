@@ -14,7 +14,7 @@ let progress = document.getElementById("progressbar");
 var docHeight = $(document).height();
 var windowHeight = $(window).height();
 window.onscroll = function () {
-  scrollFunction()
+  scrollFunction();
   var windowScrollTop = $(window).scrollTop();
   var progressHeight = (windowScrollTop / (docHeight - windowHeight)) * 100;
   progress.style.width = Math.abs(progressHeight) + "%";

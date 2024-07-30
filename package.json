@@ -1,15 +1,15 @@
 {
-    "name": "interchat-website",
-    "version": "1.0.0",
-    "main": "index.html",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "scss": "node-sass --watch . -o ."
-    },
-    "license": "MIT",
-    "keywords": [],
-    "devDependencies": {
-        "node-sass": "^9.0.0"
-    },
-    "packageManager": "yarn@4.1.1"
+  "name": "interchat-website",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "format": "prettier --write .",
+    "scss": "node-sass --watch . -o ."
+  },
+  "license": "MIT",
+  "keywords": [],
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "packageManager": "yarn@4.1.1"
 }
