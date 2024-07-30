@@ -11,8 +11,8 @@ menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay--active");
 });
 let progress = document.getElementById("progressbar");
-var docHeight = $(document).height();
-var windowHeight = $(window).height();
+var docHeight = document.body.scrollHeight;
+var windowHeight = window.innerHeight;
 window.onscroll = function () {
   scrollFunction();
   var windowScrollTop = $(window).scrollTop();
