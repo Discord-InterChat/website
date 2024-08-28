@@ -18,7 +18,7 @@ var windowHeight = window.innerHeight;
 
 window.onscroll = function () {
   scrollFunction();
-  var windowScrollTop = $(window).scrollTop();
+  var windowScrollTop = window.scrollTo({ top: 0, behavior: 'smooth' });
   var progressHeight = (windowScrollTop / (docHeight - windowHeight)) * 100;
   progress.style.width = Math.abs(progressHeight) + "%";
 };

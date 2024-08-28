@@ -1,16 +1,17 @@
 {
-  "name": "interchat-website",
-  "version": "1.0.0",
-  "main": "index.html",
-  "scripts": {
-    "format": "prettier --write .",
-    "scss": "node-sass --watch . -o ."
-  },
-  "license": "MIT",
-  "keywords": [],
-  "devDependencies": {
-    "node-sass": "^9.0.0",
-    "prettier": "^3.3.3"
-  },
-  "packageManager": "yarn@4.1.1"
-}
+    "name": "interchat-website",
+    "version": "1.0.0",
+    "main": "index.html",
+    "scripts": {
+      "format": "prettier --write .",
+      "scss": "node-sass --watch . -o ."
+    },
+    "license": "MIT",
+    "keywords": [],
+    "devDependencies": {
+      "node-sass": "^9.0.0",
+      "prettier": "^3.3.3"
+    },
+    "packageManager": "yarn@4.4.1"
+  }
+  
