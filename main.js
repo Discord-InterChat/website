@@ -1,21 +1,24 @@
-const doc = document;
-const menuOpen = doc.querySelector(".menu");
-const menuClose = doc.querySelector(".close");
-const overlay = doc.querySelector(".overlay");
+const menuOpen = document.querySelector(".menu");
+const menuClose = document.querySelector(".close");
+const overlay = document.querySelector(".overlay");
 
 menuOpen.addEventListener("click", () => {
   overlay.classList.add("overlay--active");
+  document.getElementsByClassName("navcontainer")[0].style.display = "none";
 });
 
 menuClose.addEventListener("click", () => {
   overlay.classList.remove("overlay--active");
+  document.getElementsByClassName("navcontainer")[0].style.display = "flex";
 });
+
 let progress = document.getElementById("progressbar");
-var docHeight = $(document).height();
-var windowHeight = $(window).height();
+var docHeight = document.body.scrollHeight;
+var windowHeight = window.innerHeight;
+
 window.onscroll = function () {
-  scrollFunction()
-  var windowScrollTop = $(window).scrollTop();
+  scrollFunction();
+  var windowScrollTop = window.scrollTo({ top: 0, behavior: 'smooth' });
   var progressHeight = (windowScrollTop / (docHeight - windowHeight)) * 100;
   progress.style.width = Math.abs(progressHeight) + "%";
 };

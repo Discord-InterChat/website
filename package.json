@@ -3,13 +3,15 @@
     "version": "1.0.0",
     "main": "index.html",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "scss": "node-sass --watch . -o ."
+      "format": "prettier --write .",
+      "scss": "node-sass --watch . -o ."
     },
     "license": "MIT",
     "keywords": [],
     "devDependencies": {
-        "node-sass": "^9.0.0"
+      "node-sass": "^9.0.0",
+      "prettier": "^3.3.3"
     },
-    "packageManager": "yarn@4.1.1"
-}
+    "packageManager": "yarn@4.4.1"
+  }
+  
